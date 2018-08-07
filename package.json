@@ -1,0 +1,27 @@
+{
+  "name": "v-pure-tip",
+  "version": "1.0.0",
+  "description": "A pure CSS tooltip directive for VueJs (based on Balloon.css)",
+  "dependencies": {
+    "balloon-css": "0.5.0"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Tanase Butcaru",
+    "email": "contact@butcaru.com",
+    "url": "https://butcaru.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbutcaru/v-pure-tip"
+  },
+  "homepage": "https://github.com/tbutcaru/v-pure-tip",
+  "keywords": [
+    "vuejs",
+    "tooltip",
+    "vue balloon",
+    "balloon.css directive",
+    "vue tooltip directive"
+  ]
+}
