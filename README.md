@@ -1,22 +1,22 @@
-# v-pure-tip
-> A pure CSS tooltip directive for VueJs (based on [Balloon.css](https://github.com/kazzkiq/balloon.css))
+# v-pure-tooltip
+> A pure CSS tooltip directive for Vue.js 2.x (based on [Balloon.css](https://github.com/kazzkiq/balloon.css))
 
 
 # Installation
-<pre>npm install v-pure-tip</pre>
+<pre>npm install v-pure-tooltip</pre>
 
 # Usage
 ## Load the directive
 ```js
 import Vue from 'vue';
-import VPureTip from 'v-pure-tip';
+import VPureTooltip from 'v-pure-tooltip';
 
-Vue.use(VPureTip);
+Vue.use(VPureTooltip);
 ```
 
 ## Configuration: via modifiers
 ```html
-<div v-pure-tip.POSITION.LENGTH.VISIBLE="VALUE"></div>
+<div v-pure-tooltip.POSITION.LENGTH.VISIBLE="VALUE"></div>
 ```
 ... where:
 - **POSITION**: `up`, `down`, `left`, `right`, `up-left`, `up-right`, `down-left`, `down-right`
@@ -29,12 +29,12 @@ Vue.use(VPureTip);
 
 *E.g. #1: Tooltip positioned to left, medium size and visible all the time* 
 ```html
-<div v-pure-tip.left.medium.visible="'My Awesome Tooltip Text'">I'm always visible</div>
+<div v-pure-tooltip.left.medium.visible="'My Awesome Tooltip Text'">I'm always visible</div>
 ```
 
 *E.g. #2: Tooltip positioned down-left, small size and visible only on hover*
 ```html
-<div v-pure-tip.down-left.small="tooltipMessage">Hover me!</div>
+<div v-pure-tooltip.down-left.small="tooltipMessage">Hover me!</div>
 ```
 ```js
 export default {
@@ -46,7 +46,7 @@ export default {
 
 ## Configuration: via object literals
 ```html
-<div v-pure-tip="{
+<div v-pure-tooltip="{
   position: POSITION,
   length: LENGTH,
   visible: VISIBLE,
@@ -63,7 +63,7 @@ export default {
 
 *E.g.: Tooltip positioned down, fit size and visible only on hover*
 ```html
-<div v-pure-tip="tooltipConfig">Hover me!</div>
+<div v-pure-tooltip="tooltipConfig">Hover me!</div>
 ```
 ```js
 export default {
@@ -81,9 +81,9 @@ export default {
 ## Configuration notes
 - Use only one configuration method: modifiers or object literals. There's no support for a combination of these two.
 - When using object literals or modifiers with Vue data variable, any update on these will trigger an update within the directive.
-- VPureTip can handle any Balloon.css features.  
+- VPureTooltip can handle any Balloon.css features.  
 - For more visual effects please visit the awesome [Balloon.css](https://github.com/kazzkiq/balloon.css) library and its demo page.
 
 
 ## License
-The code is available under the [MIT license](https://github.com/tbutcaru/v-pure-tip/blob/master/README.md).
+The code is available under the [MIT license](https://github.com/tbutcaru/v-pure-tooltip/blob/master/README.md).

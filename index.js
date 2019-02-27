@@ -1,6 +1,6 @@
 /**
- * @name v-pure-tip
- * @description A pure CSS tooltip directive for VueJs (based on Balloon.css)
+ * @name v-pure-tooltip
+ * @description A pure CSS tooltip directive for Vue.js 2.x (based on Balloon.css)
  * @author Tanase Butcaru <contact@butcaru.com>
  * @license MIT
  */
@@ -25,7 +25,7 @@ const DATA_ATTR_LENGTH = 'data-balloon-length';
 const DATA_ATTR_VISIBLE = 'data-balloon-visible';
 
 const defaultBallonData = {
-  [DATA_ATTR_VALUE]: 'v-pure-tip - A pure CSS tooltip (based on Ballon.css)',
+  [DATA_ATTR_VALUE]: 'v-pure-tooltip - A pure CSS tooltip (based on Ballon.css)',
   [DATA_ATTR_POSITION]: POSITION_MODIFIER[0],
   [DATA_ATTR_LENGTH]: LENGTH_MODIFIER[0],
 };
@@ -35,7 +35,7 @@ const defaultBallonData = {
  * added via modifiers.
  * @param {Object} modifiers
  * @example
- * `<div v-pure-tip.down.medium.visible="someTooltipMessage"></div>`
+ * `<div v-pure-tooltip.down.medium.visible="someTooltipMessage"></div>`
  * @returns {Object} balloon input data
  */
 const extractDataFromModifiers = (modifiers) => {
@@ -63,7 +63,7 @@ const extractDataFromModifiers = (modifiers) => {
  * added via directive object literal value.
  * @param {Object} objectLiteral
  * @example
- * `<div v-pure-tip="{
+ * `<div v-pure-tooltip="{
  *    position: 'down',
  *    length: 'medium',
  *    visible: true,
@@ -100,7 +100,7 @@ const extractDataFromObjectLiteral = (objectLiteral) => {
 
 export default {
   install(Vue) {
-    Vue.directive('pure-tip', (el, binding) => {
+    Vue.directive('pure-tooltip', (el, binding) => {
       let data;
 
       if (typeof binding.value === 'object') {
@@ -112,7 +112,7 @@ export default {
           data[DATA_ATTR_VALUE] = binding.value;
         }
       } else {
-        throw new Error('[v-pure-tip] Unrecognized input data');
+        throw new Error('[v-pure-tooltip] Unrecognized input data');
       }
 
       if (binding.oldValue) {
